@@ -30,6 +30,7 @@ a {
     color: #e6e6e6;
     transition: color .3s ease-in-out;
     margin-bottom: .5em;
+    font-size: 1.2em;
 }
 
 a:hover {

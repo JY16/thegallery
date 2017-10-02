@@ -1,0 +1,375 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+}
+/***********************************************************************************************************************
+                                                Global Styles
+***********************************************************************************************************************/
+section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+h2, p, a {
+    font-family: 'Alegreya', serif;
+}
+
+h2 {
+    text-align: center;
+    color: #e6e6e6;
+}
+
+a {
+    text-decoration: none;
+    color: #e6e6e6;
+    transition: color .3s ease-in-out;
+    margin-bottom: .5em;
+}
+
+a:hover {
+    color: #432A2B;
+}
+
+/***********************************************************************************************************************
+                                                Top Container Styles
+***********************************************************************************************************************/
+
+.top-container {
+    position: fixed;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: #BA4820;
+}
+
+.nav-button {
+    display: flex;
+    align-items: flex-end;
+    background-color: transparent;
+}
+
+.menu-toggle {
+    padding: 1em;
+    background-color: #432A2B;
+    color: #e6e6e6;
+    border: none;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color .3s ease-in-out;
+}
+
+.menu-toggle:hover {
+    background-color: #6d4953;
+}
+
+.mobile-nav {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 1em;
+    background-color: #BA4820;
+}
+
+/***********************************************************************************************************************
+                                                Header Styles
+***********************************************************************************************************************/
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50vh;
+    background: url("../images/sunrise-1598159_1920.jpg") center center no-repeat fixed;
+    background-size: cover;
+    min-height: 100vh;
+}
+
+.header-container {
+    background-color: rgba(0, 0, 0, .5);
+    width: 100%;
+    height: auto;
+    align-self: flex-end;
+    display: flex;
+    flex-direction: row;
+}
+
+.header-container h1 {
+    font-family: 'Lora', serif;
+    color: #BA4820;
+}
+
+.header-nav {
+    display: none;
+}
+
+/***********************************************************************************************************************
+                                             About-Services Styles
+***********************************************************************************************************************/
+
+.about-container, .services-container  {
+    display: flex;
+    flex-direction: column;
+}
+
+.heading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    height: 50px;
+    background-color: #FBC04F;
+}
+
+.services-container .heading {
+    background-color: #BA4820;
+    align-self: flex-end;
+}
+
+.para-container {
+    align-self: center;
+    width: 90%;
+}
+
+.para-container p {
+    line-height: 1.9;
+}
+
+
+/***********************************************************************************************************************
+                                                Gallery Styles
+***********************************************************************************************************************/
+
+.gallery {
+    background-color: #432A2B;
+    color: #e6e6e6;
+}
+
+.thumbnail-images {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.show-large-image {
+    display: none;
+}
+
+.thumb-container {
+    width: 90%;
+    height: 100%;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    border: 2px ridge #ffffff;
+}
+
+/***********************************************************************************************************************
+                                                     Footer Styles
+***********************************************************************************************************************/
+
+footer {
+    color: #432A2B;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+footer p {
+    text-align: center;
+}
+
+.p-heading {
+    font-size: 1.5em;
+}
+
+/***********************************************************************************************************************
+                                                        Media Queries
+***********************************************************************************************************************/
+
+@media (min-width: 500px) {
+    /****************************
+        About-Services Styles
+    ****************************/
+
+    .para-container {
+        width: 70%;
+    }
+
+    /****************************
+        Gallery Styles
+    ****************************/
+    .gallery-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .thumbnail-images {
+        width: 70%;
+    }
+}
+
+@media (min-width: 700px) {
+
+    /****************************
+        Gallery Styles
+    ****************************/
+    .gallery-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .thumbnail-images {
+        width: 50%;
+    }
+}
+
+
+@media (min-width: 1024px) {
+    /****************************
+            Top Container
+    ****************************/
+    .top-container {
+        display: none;
+        flex-direction: row;
+        justify-content: space-between;
+        background-color: #BA4820;
+        position: fixed;
+    }
+
+    .menu-toggle {
+        display: none;
+    }
+
+    /****************************
+        Header Container
+    ****************************/
+    header {
+        min-height: 100vh;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .header-container {
+        position: fixed;
+        justify-content: space-between;
+    }
+
+    .header-nav {
+        flex-direction: row;
+        display: flex;
+        align-items: center;
+    }
+
+    .header-nav a {
+        text-decoration: none;
+        color: #BA4820;
+        margin: .5em;
+        transition: all .3s ease-in-out;
+    }
+
+    .header-nav a:hover {
+        color: #6d4953;
+    }
+
+    /****************************
+        About-Services Container
+    ****************************/
+
+    .para-container {
+        display: flex;
+        flex-direction: column;
+        width: 60%;
+        text-align: center;
+        justify-content: space-around;
+    }
+
+    .para-container p {
+        width: 70%;
+    }
+
+    .about-container .para-container {
+        align-items: flex-start;
+        align-self: flex-start;
+        margin-right: 1em;
+    }
+
+    .services-container .para-container {
+        align-items: flex-end;
+        align-self: flex-end;
+        margin-left: 1em;
+    }
+
+    /****************************
+        Gallery Styles
+    ****************************/
+
+    .gallery-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .thumbnail-images {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 90%;
+    }
+
+    .thumb-container {
+        width: 30%;
+        height: auto;
+        margin: .5em;
+    }
+}
+
+@media (min-width: 1280px) {
+
+    /****************************
+        Gallery Styles
+    ****************************/
+
+    .gallery {
+        justify-content: space-around;
+        width: 100%;
+    }
+
+    .gallery-container {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    .thumbnail-images {
+        width: 40%;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .show-large-image {
+        display: block;
+        width: 50%;
+        height: 600px;
+    }
+
+    .thumb-container {
+        width: 20%;
+        height: auto;
+        transition: all .5s ease-in-out;
+    }
+
+    .thumb-container a {
+        transition: all .3s ease-in-out;
+    }
+}
